@@ -25,3 +25,35 @@ header{
 body{
     margin: 0;
 }
+
+li{
+    list-style-type: none;
+}
+
+.planete:hover .planeteListe{
+    display: block;
+}
+
+.planete{
+    position: relative;
+    display: inline-block;
+}
+
+.planeteListe{
+    display: none;
+    position: absolute;
+}
+
+.planeteNaine:hover .nainesListe{
+    display: block;
+}
+
+.planeteNaine{
+    position: relative;
+    display: inline-block;
+}
+
+.nainesListe{
+    display: none;
+    position: absolute;
+}
