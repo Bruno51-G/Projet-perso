@@ -1,5 +1,8 @@
 :root{
+    --light: #FFFFFF;
     --gris_sombre: #353535;
+    --gris_clair: #CECECE;
+    --hover1: #0080FF;
 }
 
 *{
@@ -28,32 +31,21 @@ body{
 
 li{
     list-style-type: none;
+    font-size: 2rem;
+    background-color: var(--gris_clair);
 }
 
-.planete:hover .planeteListe{
-    display: block;
+li:hover:not(:first-child){
+    background-color: var(--hover1);
+    color: var(--light);
 }
 
-.planete{
-    position: relative;
-    display: inline-block;
+.titre{
+    font-size: 3rem;
+    color: var(--light);
+    background-color: var(--gris_sombre);
 }
 
-.planeteListe{
-    display: none;
-    position: absolute;
-}
 
-.planeteNaine:hover .nainesListe{
-    display: block;
-}
 
-.planeteNaine{
-    position: relative;
-    display: inline-block;
-}
 
-.nainesListe{
-    display: none;
-    position: absolute;
-}
