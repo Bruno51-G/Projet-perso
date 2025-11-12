@@ -59,13 +59,20 @@ li:hover:not(:first-child){
 
 ul{
     padding: 0;
-    width: 12%;
+    width: 21rem;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
 }
 
+main{
+    display: flex
+}
 
+.conteneurNav{
+    display: flex;
+    flex-direction: column;
+}
 
 
 
