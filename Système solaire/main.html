@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./assets/css/tailleImage.css">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+    <script src="./assets/js/script.js" type="module"></script>
     <title>Projet perso : Système solaire</title>
 </head>
 <body>
@@ -74,9 +75,16 @@
                 (la presque totalité des astéroïdes et autres planètes mineures, les comètes, 
                 les poussières cosmiques, etc.).
             </p>
+
             <div class="imgParagraphe">
-                <img src="./assets/img/comparaison_planete_taille.jpg" alt="Comparaison de taille du soleil et des planète">
+                <img src="./assets/img/comparaison_planete_taille.jpg" alt="Comparaison de taille du soleil et des planète"
+                class="clickableImg" data-full="./assets/img/comparaison_planete_taille.jpg">
                 <p class="legendeImageParagraphe">Comparaison de taille entre le soleil et les 8 planètes confirmées.</p>
+            </div>
+
+            <div id="lightbox">
+                <span id="closeLightbox">x</span>
+                <img id="lightboxImg" src="" alt="Image agrandie">
             </div>
         </div>
     </main>

@@ -1,0 +1,53 @@
+:root{
+    --light: #FFFFFF;
+    --dark: #000000;
+    --gris_sombre: #353535;
+    --gris_clair: #CECECE;
+    --hover1: #0080FF;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+.imgParagraphe{
+    text-align: center;
+    margin: 3rem, 0;
+}
+
+.clickableImg{
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    cursor: zoom-in;
+    border: 3px solid var(--gris_sombre);
+    transition: all 0.3s ease;
+}
+
+.clickableImg:hover{
+    transform: scale(1.03);
+    box-shadow: 0 10px 30px var(--dark);
+}
+
+.legendeImageParagraphe{
+    margin-top: 1rem;
+    font-style: italic;
+    font-size: 1.8rem;
+}
+
+#lightBoxImg{
+    max-width: 95%;
+    max-height: 85vh;
+    border-radius: 16px;
+    box-shadow: 0 0 40px var(--gris_sombre);
+    animation: zoomIn 0.4s ease;
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.7); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
