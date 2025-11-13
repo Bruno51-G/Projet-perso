@@ -38,9 +38,13 @@ h1{
 
 body{
     margin: 0;
+    background-color: var(--light);
+    background: linear-gradient(180deg,var(--light) 28%, var(--gris_clair) 59%, var(--gris_sombre) 95%);
 }
 
 li{
+    padding: 0.5rem;
+    border: 1px solid var(--gris_sombre);
     list-style-type: none;
     font-size: 2rem;
     background-color: var(--gris_clair);
@@ -48,6 +52,7 @@ li{
 
 li:hover:not(:first-child){
     background-color: var(--hover1);
+    border: 1px solid var(--hover1);
     color: var(--light);
 }
 
@@ -60,14 +65,16 @@ li:hover:not(:first-child){
 
 ul{
     padding: 0;
-    width: 21rem;
+    width: 22rem;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
 }
 
 main{
-    display: flex
+    display: flex;
+    margin-left: 30rem;
+    margin-right: 30rem;
 }
 
 .conteneurNav{
@@ -78,10 +85,14 @@ main{
 
 .conteneur{
     margin-top: 1rem;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     font-family: 'Exo 2', Verdana, Geneva, Tahoma, sans-serif;
     margin-left: 2rem;
     margin-right: 2rem;
+}
+
+.paragraphe{
+    text-align: justify;
 }
 
 

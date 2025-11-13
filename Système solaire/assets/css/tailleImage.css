@@ -14,40 +14,95 @@ html{
     font-size: 62.5%;
 }
 
-.imgParagraphe{
+.imgParagraphe {
     text-align: center;
-    margin: 3rem, 0;
+    margin: 3rem 0;
 }
 
-.clickableImg{
+.clickableImg {
+    max-width: 650px;
     width: 100%;
-    max-width: 600px;
     height: auto;
     cursor: zoom-in;
     border: 3px solid var(--gris_sombre);
     transition: all 0.3s ease;
 }
 
-.clickableImg:hover{
+.clickableImg:hover {
     transform: scale(1.03);
-    box-shadow: 0 10px 30px var(--dark);
 }
 
-.legendeImageParagraphe{
+.legendeImageParagraphe {
     margin-top: 1rem;
     font-style: italic;
+    color: var(--gris_sombre);
     font-size: 1.8rem;
+    text-align: left;
+    max-width: 650px;
+    margin: 2rem auto;
+    padding-left: 0;
 }
 
-#lightBoxImg{
-    max-width: 95%;
-    max-height: 85vh;
-    border-radius: 16px;
-    box-shadow: 0 0 40px var(--gris_sombre);
-    animation: zoomIn 0.4s ease;
+#lightbox {
+    /* On force le positionnement par rapport à la fenêtre */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--gris_sombre);
+    
+    /* Centrage parfait */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Par-dessus TOUT */
+    z-index: 9999;
+    
+    /* Démarre caché */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
 }
 
-@keyframes zoomIn {
-    from { transform: scale(0.7); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
+/* Quand le JS met display:flex → on rend visible */
+#lightbox.active,
+#lightbox[style*="flex"] {
+    opacity: 1;
+    visibility: visible;
 }
+
+/* L'image en grand */
+#lightboxImg {
+    max-width: 95vw;      /* 95% de la largeur de l'écran */
+    max-height: 95vh;     /* 95% de la hauteur de l'écran */
+    width: auto;
+    height: auto;
+    animation: zoom 0.5s ease;
+}
+
+@keyframes zoom {
+    from { transform: scale(0.6); opacity: 0; }
+    to   { transform: scale(1); opacity: 1; }
+}
+
+/* Bouton de fermeture */
+#closeLightbox {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 4.5rem;
+    color: var(--light);
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+    user-select: none;
+    z-index: 10000;
+}
+
+#closeLightbox:hover {
+    transform: scale(1.2);
+}
+
+
