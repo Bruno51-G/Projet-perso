@@ -95,6 +95,13 @@ main{
     text-align: justify;
 }
 
+.carte{
+    display: block;
+    margin: auto;
+    width: 800px;
+    height: 520px;
+}
+
 
 
 
